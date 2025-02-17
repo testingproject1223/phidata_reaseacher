@@ -6,7 +6,7 @@ from phi.tools.newspaper4k import Newspaper4k
 import os
 
 # Set your API key
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyCoXQ7uq-mWXfwzXxhT5nV6cgZMTybVntw'
+os.environ['GOOGLE_API_KEY'] = ''
 
 def initialize_agent():
     return Agent(
