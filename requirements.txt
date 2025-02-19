@@ -1,0 +1,2 @@
+phidata==2.7.10
+streamlit==1.42.1
