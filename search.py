@@ -150,7 +150,8 @@ def create_research_agent(api_key: str, link_count: int):
         instructions=[
             f"For a given topic, search for the top {link_count} links.",
             "Then read each URL and extract the article text. If a URL isn't available, ignore it.",
-            "Analyze and prepare an NYT-worthy article based on the information."
+            "Analyze and prepare an NYT-worthy article based on the information.",
+            "make sure everytime used ask question you have to do propersearch and don't give response by your own,"
         ],
         markdown=True,
         show_tool_calls=True,
