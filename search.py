@@ -149,7 +149,7 @@ def create_research_agent(api_key: str, link_count: int):
         description="You are a senior NYT researcher writing an article on a topic.",
         instructions=[
             f"first you will make a plan  of what to answer and generate a series of question for the given topic"
-            "For a given topic, search for the top {link_count} links.",
+            "For a given topic, search for the top 20 links.",
             "Then read each URL and extract the article text. If a URL isn't available, ignore it.",
             "Analyze and prepare an NYT-worthy article based on the information.",
             "make sure everytime used ask question you have to do propersearch and don't give response by your own,"
