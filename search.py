@@ -159,6 +159,7 @@ def create_research_agent(api_key: str, link_count: int):
         add_datetime_to_instructions=True,
         add_history_to_messages=True,
         num_history_responses=3,
+        duckduckgo_news=True
     )
 
 research_agent = create_research_agent(st.session_state.apikey, st.session_state.link_count)
