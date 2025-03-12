@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from phi.agent import Agent
-from phi.model.google import Gemini
+from phi.model.groq import Groq
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.tools.newspaper4k import Newspaper4k
 
@@ -40,7 +40,7 @@ def configure_sidebar():
     
     # API key input
     api_key = st.sidebar.text_input(
-        "Google API Key:",
+        "Groq API Key:",
         type="password",
         value=st.session_state.apikey,
         help="Get your API key from https://makersuite.google.com/"
@@ -142,9 +142,9 @@ if not st.session_state.apikey:
 # -----------------------------
 @st.cache_resource(show_spinner=False)
 def create_research_agent(api_key: str, link_count: int):
-    os.environ["GOOGLE_API_KEY"] = api_key  # Consider using secrets in production
+    os.environ["GROQ_API_KEY"] = api_key  # Consider using secrets in production
     return Agent(
-        model=Gemini(id="gemini-2.0-flash-exp"),
+        model=Groq(id="deepseek-r1-distill-llama-70b"),
         tools=[DuckDuckGo(), Newspaper4k()],
         description="You are a senior NYT researcher writing an article on a topic.",
         instructions=[
