@@ -1,6 +1,6 @@
 phidata==2.7.10
 streamlit==1.42.1
-google-generativeai
+groq
 duckduckgo-search
 newspaper4k
 lxml_html_clean
